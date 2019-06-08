@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
-import HelloWorld from './components/HelloWorld'
+import AddEmp from './components/AddEmp'
+import HomePage from './components/pages/HomePage'
 
 class App extends Component {
   render() {
-    return <HelloWorld />
+    return <AddEmp />
   }
 }
 

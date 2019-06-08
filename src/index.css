@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text|Lato&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
 :root {
   font: 16px / 1 sans-serif;
 }
@@ -9,4 +11,147 @@ html {
 body {
   margin: 0;
   min-height: 100%;
+  background-color:rgb(240, 240, 240); 
+
+  
 }
+
+.header-img-cont{
+  display:flex;
+  justify-content: space-evenly;
+  height:6rem;
+  background-color:rgb(5, 5, 151);
+  color:white;  
+}
+.header-img-cont img{
+  height:6rem;
+}
+.header-img-cont p:nth-child(2){
+  margin-left:5rem;
+ 
+}
+.header-img-cont p{
+  margin-top:4.5rem;
+  height:1.4rem;
+  font-size:1.1rem;
+  font-family: 'Oswald', sans-serif;
+  
+}
+.header-img-cont p:hover{
+  transform:scale(1.1);
+  background-color:rgba(83, 155, 242, 0.461);
+}
+
+.m-state{
+display: flex;
+padding-top: 3rem;
+justify-content:center;
+}
+
+.m-state-info{
+  width:62%;
+}
+
+.m-state img{
+  border-radius:5px;
+  width:15rem;
+  height:17rem;
+  margin-left:3rem;
+  }
+.m-state h2{ margin-left:3rem;}
+
+.m-state p{
+  margin-left:3rem;
+  padding-right:20vw;
+  font-style:italic;
+}
+.d-state{
+  display: flex;
+  padding-top: 3rem;
+  justify-content:center;
+  }
+  
+ .d-state-info{
+   width:62%;
+ } 
+  .d-state img{
+    border-radius:5px;
+    width:15rem;
+    height:17rem;
+    margin-left:3rem;
+    }
+  .d-state h2{ margin-left:3rem;}
+  
+  
+  .d-state p{
+    margin-left:3rem;
+    padding-right:20vw;
+    font-style:italic;
+  }
+
+.name-cont{
+ 
+    padding:5rem 0 2rem 0;
+    display:flex;
+    align-items:center;
+    flex-direction:column; 
+    justify-content:center;
+  }
+
+.name-box{
+  background-color:white;
+  display:flex;
+  align-items:center;
+  flex-direction:column;
+  font-family: 'Oswald', sans-serif;
+  padding:2rem 6rem 3rem 6rem;
+  border-radius:8px;
+  border-top:2px orange solid;
+  font-family: 'Oswald', sans-serif;
+}
+
+
+input{
+  border-radius: 2px;
+  height:2rem;
+  width:10rem;
+  font-size:1rem;
+  font-family: 'Lato', sans-serif;
+  border-bottom:2px solid blue;   
+} 
+
+input:hover{
+  background-color:rgba(171, 205, 247, 0.324);
+}
+
+.address-cont{
+    padding:.2rem 0 2rem 0;
+    display:flex;
+    align-items:center;
+    flex-direction:column; 
+    justify-content:center;
+}
+
+
+.address-box{
+  background-color:white;
+  display:flex;
+  align-items:center;
+  flex-direction:column;
+  font-family: 'Oswald', sans-serif;
+  padding:2rem 6rem 3rem 6rem;
+  border-radius:8px;
+  border-top:2px orange solid;
+  font-family: 'Oswald', sans-serif;
+}
+
+
+
+.req{
+  color:red;
+}
+
+
+/* input:focus{
+  background-color:rgba(254, 254, 254, 0.461)
+} */
