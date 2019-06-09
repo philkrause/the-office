@@ -32,12 +32,13 @@ export default function EmpList() {
       <Header />
       <div className='emplist-buttons'>
         <button onClick={getEmployList}>Get Employee List</button>
-
-        <input
-          placeholder='Enter Employee ID'
-          type='text'
-          onChange={e => setId(e.target.value)}
-        />
+        <div className='delete-input'>
+          <input
+            placeholder='Enter Employee ID'
+            type='text'
+            onChange={e => setId(e.target.value)}
+          />
+        </div>
         <button onClick={deleteEmploy}>Delete</button>
       </div>
       <div className='emplist'>
@@ -47,14 +48,14 @@ export default function EmpList() {
               <Link to={{
                 pathname: `/EmployeeList/${emp.id}`
               }}>
-                < section className='emp-box' >
+                <section className='emp-box' >
                   <h3>{emp.jobTitle}</h3>
                   <p>{`${emp.firstName} ${emp.lastName}`}</p>
-                  <p>{emp.id}</p>
+                  <p>{`ID: ${emp.id}`}</p>
+                  <p>{`Full-time: ${emp.isFullTime ? 'True' : 'False'}`}</p>
                 </section>
               </Link>
             </>
-
           )
         })
         }
