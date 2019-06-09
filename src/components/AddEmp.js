@@ -5,42 +5,38 @@ import Header from './Header'
 
 export default function AddEmp() {
 
-  const DunderMifflin = 'DunderMifflin'
-
   const [employFile, setEmployFile] = useState({})
-  const [employList, setEmployList] = useState([])
-
-
-
 
   const addEmployFile = (e) => {
     e.preventDefault()
-    // axios.post(`https://sdg-staff-directory-app.herokuapp.com/api/${DunderMifflin}/employees`,
-    //   employFile
-    // )
-    console.log(employFile)
-    // console.log(employFile)
-  }
-  const getEmployList = (e) => {
-    e.preventDefault()
-    axios.get(`https://sdg-staff-directory-app.herokuapp.com/api/${DunderMifflin}/employees`
-    ).then(resp => {
-      // console.log(employList)
-      setEmployList(resp.data)
-      console.log(resp.data)
-    })
+    axios.post(`https://sdg-staff-directory-app.herokuapp.com/api/DunderMifflin/employees`,
+      employFile
+    ).then(
+      alert('Form was Submitted'),
+      console.log(employFile)
+    )
   }
 
   return (
     <>
       <Header />
 
-      <form>
+      <form onSubmit={addEmployFile}>
         <section className='name-cont'>
           <div className='name-box'>
             <h2>Personal Information</h2>
+            <h3>Job Title <span className='req'>*</span></h3>
+            <input type='text'
+              className='last-name'
+              onChange={e => {
+                setEmployFile(prevData => {
+                  prevData.jobTitle = e.target.value
+                  return prevData
+                })
+              }}
+            />
             <h3>Full Name <span className='req'>*</span></h3>
-            <input type='text' placeholder='First Name'
+            <input type='text'
               onChange={e => {
                 setEmployFile(prevData => {
                   prevData.firstName = e.target.value
@@ -50,7 +46,7 @@ export default function AddEmp() {
             />
 
             <h3>Last Name <span className='req'>*</span></h3>
-            <input type='text' placeholder='Last Name'
+            <input type='text'
               className='last-name'
               onChange={e => {
                 setEmployFile(prevData => {
@@ -59,10 +55,8 @@ export default function AddEmp() {
                 })
               }}
             />
-
-
             <h3>Birth Date <span className='req'>*</span></h3>
-            <input type='date' placeholder='Birth Date'
+            <input type='date'
               onChange={e => {
                 setEmployFile(prevData => {
                   prevData.birthday = e.target.value
@@ -75,8 +69,9 @@ export default function AddEmp() {
         </section >
         <section className='address-cont'>
           <div className='address-box'>
+            <h2>Contact  Information</h2>
             <h3>Address <span className='req'>*</span></h3>
-            <input type='text' placeholder='Address'
+            <input type='text'
               onChange={e => {
                 setEmployFile(prevData => {
                   prevData.address = e.target.value
@@ -87,7 +82,7 @@ export default function AddEmp() {
 
 
             <h3>City</h3>
-            <input type='text' placeholder='City'
+            <input type='text'
               onChange={e => {
                 setEmployFile(prevData => {
                   prevData.city = e.target.value
@@ -98,7 +93,7 @@ export default function AddEmp() {
 
 
             <h3>Zip Code</h3>
-            <input type='text' placeholder='ZipCode'
+            <input type='text'
               onChange={e => {
                 setEmployFile(prevData => {
                   prevData.zip = e.target.value
@@ -109,7 +104,7 @@ export default function AddEmp() {
 
 
             <h3>State</h3>
-            <input type='text' placeholder='State'
+            <input type='text'
               onChange={e => {
                 setEmployFile(prevData => {
                   prevData.state = e.target.value
@@ -118,8 +113,10 @@ export default function AddEmp() {
               }}
             />
           </div>
+          <button onClick={addEmployFile} className='form-button'>Submit</button>
         </section>
       </form >
+
     </>
   )
 }

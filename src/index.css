@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Crimson+Text|Lato&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins|Roboto+Slab&display=swap');
 :root {
   font: 16px / 1 sans-serif;
 }
-
 html {
   height: 100%;
 }
@@ -11,33 +11,45 @@ html {
 body {
   margin: 0;
   min-height: 100%;
-  background-color:rgb(240, 240, 240); 
-
-  
+  background-color:rgba(247, 244, 244, 0.932); 
 }
 
-.header-img-cont{
+.head{
   display:flex;
   justify-content: space-evenly;
   height:6rem;
   background-color:rgb(5, 5, 151);
   color:white;  
 }
-.header-img-cont img{
+h2{
+  font-family: 'Poppins', sans-serif;
+
+}
+a{
+  text-decoration:none;
+  color:white;
+}
+.head img{
   height:6rem;
 }
-.header-img-cont p:nth-child(2){
+.head p:nth-child(2){
   margin-left:5rem;
  
 }
-.header-img-cont p{
+ .head p{
   margin-top:4.5rem;
   height:1.4rem;
-  font-size:1.1rem;
+  font-size:.8rem;
   font-family: 'Oswald', sans-serif;
-  
+  text-decoration:none; 
 }
-.header-img-cont p:hover{
+
+article{
+  padding:0 2rem 0 2rem;
+  font-family: 'Crimson', sans-serif;
+
+}
+.head p:hover{
   transform:scale(1.1);
   background-color:rgba(83, 155, 242, 0.461);
 }
@@ -50,6 +62,9 @@ justify-content:center;
 
 .m-state-info{
   width:62%;
+  background-color:white;
+  border-radius:6px;
+  box-shadow:2px 2px grey;
 }
 
 .m-state img{
@@ -57,6 +72,7 @@ justify-content:center;
   width:15rem;
   height:17rem;
   margin-left:3rem;
+  box-shadow:2px 2px grey;
   }
 .m-state h2{ margin-left:3rem;}
 
@@ -65,32 +81,8 @@ justify-content:center;
   padding-right:20vw;
   font-style:italic;
 }
-.d-state{
-  display: flex;
-  padding-top: 3rem;
-  justify-content:center;
-  }
-  
- .d-state-info{
-   width:62%;
- } 
-  .d-state img{
-    border-radius:5px;
-    width:15rem;
-    height:17rem;
-    margin-left:3rem;
-    }
-  .d-state h2{ margin-left:3rem;}
-  
-  
-  .d-state p{
-    margin-left:3rem;
-    padding-right:20vw;
-    font-style:italic;
-  }
 
 .name-cont{
- 
     padding:5rem 0 2rem 0;
     display:flex;
     align-items:center;
@@ -99,33 +91,39 @@ justify-content:center;
   }
 
 .name-box{
+  box-shadow:2px 2px rgb(205, 205, 205);
   background-color:white;
   display:flex;
   align-items:center;
   flex-direction:column;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Poppins', sans-serif;  
+  font-size:.7rem;
   padding:2rem 6rem 3rem 6rem;
-  border-radius:8px;
-  border-top:2px orange solid;
-  font-family: 'Oswald', sans-serif;
+  border-top:2px rgb(0, 255, 221) solid;
 }
 
 
 input{
   border-radius: 2px;
+  box-shadow:1px 1px grey;
   height:2rem;
   width:10rem;
   font-size:1rem;
   font-family: 'Lato', sans-serif;
-  border-bottom:2px solid blue;   
+  border:2px solid rgb(255, 174, 0); 
+    
 } 
+input::placeholder{
+  text-align:center;
+  font-family: 'Lato', sans-serif;
+}
 
 input:hover{
   background-color:rgba(171, 205, 247, 0.324);
 }
 
 .address-cont{
-    padding:.2rem 0 2rem 0;
+    padding:2rem 0 2rem 0;
     display:flex;
     align-items:center;
     flex-direction:column; 
@@ -134,22 +132,63 @@ input:hover{
 
 
 .address-box{
+  box-shadow:2px 2px rgb(205, 205, 205);
   background-color:white;
   display:flex;
   align-items:center;
   flex-direction:column;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-size:.7rem;
   padding:2rem 6rem 3rem 6rem;
-  border-radius:8px;
-  border-top:2px orange solid;
-  font-family: 'Oswald', sans-serif;
+  border-top:2px rgb(0, 255, 221) solid;
 }
 
+.form-button{
+  border-top:2px orange solid;
+  color:blue;
+  box-shadow: 1px 1px grey;
+  margin-top:2rem;
+  padding:2rem; 
+  font-family: 'Poppins', sans-serif;
+}
 
 
 .req{
   color:red;
 }
+
+.emplist-buttons{
+  display:flex; 
+}
+.emplist-buttons button:hover{
+  border:2px solid orange;
+}
+
+.emplist{
+display: flex;
+justify-content: center;
+}
+.emp-box {
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  background-color:white;
+  box-shadow:1px 1px grey;
+  font-family: 'Poppins', sans-serif;
+  font-size:1rem;
+  text-decoration:none;
+  color:black;
+  margin:0;
+  padding:1rem;
+}
+.emp-box p {
+  margin:0;
+  padding:1rem;
+}
+.emp-box:hover{
+  border: solid 2px rgb(0, 217, 255);
+}
+
 
 
 /* input:focus{
